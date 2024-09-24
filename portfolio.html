@@ -1,69 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="static/css/style.css">
-  <meta charset="UTF-8" />
-  <title>About RATR</title>
-  <link rel="icon" type="image/png" href="/static/assets/pfp.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/16b9f38026.js" crossorigin="anonymous"></script>
-  <script src="{{ url_for('static', filename='js/index.js') }}" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <title>About RATR</title>
+    <link rel="icon" type="image/png" href="static/assets/pfp.png" />
+    <link rel="stylesheet" href="static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/16b9f38026.js" crossorigin="anonymous"></script>
+    <script src="static/js/index.js" crossorigin="anonymous"></script>
 </head>
 <body class="body">
-  <header class="top-bar">
-    <img src="/static/assets/pfp.png" alt="Profile Picture" class="top-bar-icon">
-    <h1 class="top-bar-title">About RATR</h1>
-  </header>
-  <main class="container">
-    <div class="banner">
-      <img class="banner-img" src="/static/assets/car-by-water.gif" alt="banner" />
-      <section class="pfp">
-        <div class="parent">
-          <img class="pfp-img" src="/static/assets/pfp.png" alt="pfp" />
+    <header class="top-bar">
+        <img src="static/assets/pfp.png" alt="Profile Picture" class="top-bar-icon">
+        <h1 class="top-bar-title">About RATR</h1>
+    </header>
+    <main class="container">
+        <div class="banner">
+            <img class="banner-img" src="static/assets/car-by-water.gif" alt="banner" />
+            <section class="pfp">
+                <div class="parent">
+                    <img class="pfp-img" src="static/assets/pfp.png" alt="pfp" />
+                </div>
+                <div class="status"></div>
+            </section>
         </div>
-        <div class="status"></div>
-    </div>
-    <div class="stats-container scrollbar-custom">
-      <section class="name">
-        <h1 class="display-name">RATR </h1>
-        <p class="username">@RATR_2</p>
-        <p class="pronouns">He/Him</p>
-      </section>
-      <p class="note">"Coding is fun :|”</p>
-      <section class="about-me">
-        <h1 class="section-title">About me</h1>
-        <p class="section-text">
-          Hello, Im RATR. I create Discord bots, Websites, And anything minecraft.
-        </p>
-      </section>
-      <section class="socials">
-        <h1 class="section-title">Socials</h1>
-        <div class="social-icons-container">
-          <a href="https://github.com/RATR2" rel="noopener noreferrer" target="_blank" class="social-button">
-            <i class="fa-brands fa-github social-icon"></i>
-            <span class="social-text">RATR2</span>
-          </a>
-          <a href="https://www.youtube.com/@RATR_2" target="_blank" class="social-button">
-            <i class="fa-brands fa-youtube social-icon"></i>
-            <span class="social-text">RATR_2</span> 
-          </a>
+        <div class="stats-container scrollbar-custom">
+            <section class="name">
+                <h1 class="display-name">RATR </h1>
+                <p class="username">@RATR_2</p>
+                <p class="pronouns">He/Him</p>
+            </section>
+            <p class="note">"Coding is fun :|”</p>
+            <section class="about-me">
+                <h1 class="section-title">About me</h1>
+                <p class="section-text">
+                    Hello, I'm RATR. I create Discord bots, Websites, And anything Minecraft.
+                </p>
+            </section>
+            <section class="socials">
+                <h1 class="section-title">Socials</h1>
+                <div class="social-icons-container">
+                    <a href="https://github.com/RATR2" rel="noopener noreferrer" target="_blank" class="social-button">
+                        <i class="fa-brands fa-github social-icon"></i>
+                        <span class="social-text">RATR2</span>
+                    </a>
+                    <a href="https://www.youtube.com/@RATR_2" target="_blank" class="social-button">
+                        <i class="fa-brands fa-youtube social-icon"></i>
+                        <span class="social-text">RATR_2</span> 
+                    </a>
+                </div>
+            </section>
         </div>
-    </div>
-  </main>
-  <p style="color: rgb(0, 248, 174);">Copyright of RATR_2 ©<span id="getCurrentDate"></span></p>
+    </main>
+    <p style="color: rgb(0, 248, 174);">Copyright of RATR_2 ©<span id="getCurrentDate"></span></p>
+
+    <script>
+        var dt = new Date();
+        document.getElementById('getCurrentDate').innerHTML = dt.getFullYear();
+
+        var currentPage = window.location.pathname;
+        var navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(function(link) {
+            if (link.href.includes(currentPage)) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
-<script>
-  var dt = new Date();
-  document.getElementById('getCurrentDate').innerHTML = dt.getFullYear();
-
-  var currentPage = window.location.pathname;
-  var navLinks = document.querySelectorAll('.nav-link');
-
-  navLinks.forEach(function(link) {
-    if (link.href.includes(currentPage)) {
-      link.classList.add('active');
-    }
-  });
-</script>
