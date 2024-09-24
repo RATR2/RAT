@@ -6,7 +6,7 @@
 
 html,
 body {
-  background-image: url('/static/assets/1.gif');
+  background-image: url('../assets/1.gif'); /* Updated path */
   height: 100vh;
 }
 
@@ -19,7 +19,7 @@ p {
 
 @font-face {
   font-family: "Pixelar";
-    src: url('/static/assets/PR.ttf') format("truetype");
+  src: url('../assets/PR.ttf') format("truetype"); /* Updated path */
 }
 
 ::-webkit-scrollbar {
@@ -50,14 +50,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('/static/assets/1.gif');
+  background-image: url('../assets/1.gif'); /* Updated path */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #191824;
   color: white;
-  font-family: "Pixelar", san-serif;
+  font-family: "Pixelar", sans-serif; /* Fixed typo in "sans-serif" */
   padding: 50px;
   min-height: 100vh;
 }
@@ -130,7 +130,6 @@ p {
   font-family: "Pixelar", sans-serif;
   margin: 0;
 }
-
 
 #back {
   position: absolute;
@@ -426,41 +425,17 @@ p {
 
   h3 {
     font-size: 50px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   p {
-    font-size: 48px;
-    font-weight: 500;
-  }
-
-  .mt {
-    margin-top: 35px;
-  }
-
-  .banner {
-    height: 315px;
-  }
-
-  .banner-img {
-    width: 1000px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-  }
-
-  .stats-container {
-    width: 1000px;
-    height: 80%;
-    padding: 50px 50px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    font-size: 40px;
   }
 
   .pfp {
     width: 200px;
     height: 200px;
-    bottom: -78px;
-    left: 30px;
+    bottom: -100px;
   }
 
   #back {
@@ -472,168 +447,31 @@ p {
   }
 
   .status {
-    bottom: 1px;
-    right: 5px;
+    bottom: -5px;
+    right: -5px;
     width: 50px;
     height: 50px;
   }
 
   .social-icon {
-    font-size: 75px;
+    font-size: 70px;
   }
 
   .section-title {
-    font-size: 55px;
+    font-size: 60px;
   }
 
   .section-text {
-    font-size: 45px;
+    font-size: 50px;
   }
 
   .about-me,
   .member-since {
-    margin-bottom: 15px;
-  }
-
-  .divider {
-    margin-top: 40px;
-    margin-bottom: 50px;
-    height: 8px;
+    margin-bottom: 30px;
   }
 
   .note {
-    font-size: 45px;
-    margin-top: 35px;
+    font-size: 40px;
+    margin-top: 30px;
   }
-
-  .display-name {
-    font-size: 64px;
-    margin-bottom: -15px;
-  }
-
-  .username {
-    font-size: 50px;
-  }
-
-  .pronouns {
-    font-size: 43px;
-  }
-  }
-  .parent {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  .image2 {
-    position: absolute;
-    top: -20px;
-    left: 0px;
-
-  }
-  a:link { 
-    text-decoration: none; 
-  } 
-  a:visited { 
-    text-decoration: none; 
-  } 
-  a:hover { 
-    text-decoration: none; 
-  } 
-  a:active { 
-    text-decoration: none; 
-  }
-
-
-#skittlesfy-button {
-position: absolute;
-top: 20px; 
-left: 50px; /* Moved to the left */
-padding: 10px 20px;
-background-color: #53acff; 
-color: white;
-border: none;
-border-radius: 5px;
-text-decoration: none; 
-font-family: "Pixelar", san-serif;
-z-index: 100;
-font-size: 20px; /* Larger text size */
-}
-
-#back-button { 
-position: absolute;
-top: 20px;
-right: 50px; /* Moved to the right */
-padding: 10px 20px;
-background-color: #53acff; 
-color: white;
-border: none;
-border-radius: 5px;
-text-decoration: none;
-font-family: "Pixelar", san-serif;
-z-index: 100; 
-font-size: 20px; /* Larger text size */
-}
-.pfp,
-.container,
-.stats-container,
-.name,
-.note,
-.divider,
-.about-me,
-.member-since,
-.socials, /* If you have a .socials class */
-.social-icons-container,
-#skittlesfy-button {
-opacity: 0;
-animation: fadeInUp 1s ease forwards; 
-}
-
-/* Add animation delays to stagger the appearance */
-.pfp { animation-delay: 0.4s; }
-.stats-container { animation-delay: 0.6s; }
-.name { animation-delay: 0.8s; } 
-.note { animation-delay: 1s; }
-.divider { animation-delay: 1.2s; }
-.about-me { animation-delay: 1.4s; } 
-.member-since { animation-delay: 1.6s; }
-.socials, /* If you have a .socials class */
-.social-icons-container { animation-delay: 1.8s; } 
-#skittlesfy-button { animation-delay: 2s; } 
-
-@keyframes fadeInUp {
-0% {
-  opacity: 0;
-  transform: translateY(20px);
-}
-100% {
-  opacity: 1;
-  transform: translateY(0);
-}
-}
-
-.social-button {
-display: inline-flex; /* Arrange icon and text horizontally */
-align-items: center;   /* Center vertically */
-padding: 10px 15px;    /* Add some button padding */
-border: 2px solid #53acff; /* Blue outline */
-border-radius: 5px;
-text-decoration: none;
-color: white;            /* Text color (adjust as needed) */
-margin-right: 10px;     /* Space between buttons */
-}
-
-.social-button:hover {
-background-color: #53acff; /* Light blue on hover */
-}
-
-.social-icon {
-font-size: 24px;         /* Adjust icon size as desired */
-margin-right: 8px;       /* Space between icon and text */
-}
-
-.social-text {
-font-size: 16px;         /* Adjust text size as desired */
-}
-#getCurrentDate {
-color: rgb(0, 248, 174);
 }
