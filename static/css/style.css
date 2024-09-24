@@ -6,7 +6,7 @@
 
 html,
 body {
-  background-image: url('/static/assets/1.bg');
+  background-image: url('/static/assets/1.gif');
   height: 100vh;
 }
 
@@ -50,7 +50,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('/static/assets/1.bg');
+  background-image: url('/static/assets/1.gif');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
