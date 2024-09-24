@@ -19,7 +19,7 @@ p {
 
 @font-face {
   font-family: "Pixelar";
-    src: url('/static/assets/PixelarRegular.ttf') format("truetype");
+    src: url('/static/assets/PR.ttf') format("truetype");
 }
 
 ::-webkit-scrollbar {
